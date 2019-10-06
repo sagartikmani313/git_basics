@@ -1,0 +1,27 @@
+markdown .md  //Markdown is  a markup language.
+
+1. git init
+2. touch filename   //Creating an empty file.
+3. git status //Shows the current status of the git tracking 
+//4. DO NOT USE git add .   //Dangerous - adds the entire directory contents
+4.git add <filename>
+5.//Before commiting on a new machine, you need to set up username and email.
+////Use git config --global user.email "<email>"
+////Then use git config --global user.name "<username>"
+///To view your current config, use git config -l
+5.git commit -m <Message> // Message in single quotes
+//6. Never commit compiled code into git
+//7. You will not see the previously commited files when git status is called.
+7. git clean -fd ///Used to remove untracked files(-f) from the current repository(-d). Also does not remove previously commited files.
+8. Create github repository, it should preferably have the same name as the local repository
+//9. To add a remote repository (on gitub) to the local repo
+9. git remote add origin https://github.com/Rapteon/first-project.git
+//10. To push the local repo to the remote repo
+10. git push -u origin master
+//11. git remote set-url origin <link> //Link of your repo   //Usedonly in case you make a mistake while cloning the repository
+12. git diff //used to view the changes
+13. git log //Shows complete history of the repository
+//14. Suppose a bug was encountered, and the previous version was working, then to revert to the previous working state, use the following.
+//14. The git revert command reverts the changes made to the file on the local repo, not on the remote repo
+14. git revert <commitHash> -m "Message to type" //<commitHash>is the commit hash which can be viewed through the gitlog command
+
